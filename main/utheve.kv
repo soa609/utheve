@@ -1,0 +1,83 @@
+#: import FadeTransition kivy.uix.screenmanager.FadeTransition
+
+ScreenManagement:
+	transition: FadeTransition()
+	LoadingScreen:
+	HomeScreen:
+	HintScreen:
+	MagicScreen:
+
+
+<Button>:
+	font_size: 16
+	color: 221/255.0,221/255.0,221/255.0,1
+	size_hint: 1/3, 0.075
+	background_color: (34/255.0,117/255.0,109/255.0,1)
+	background_disabled_normal: ''
+	disabled_color: 1,0,1,1
+	
+
+<LoadingScreen>:
+	name: "LoadingS"
+	Button:
+		on_release: app.root.current = "HomeS"
+		text: "LOADING SCREEN LOGO"
+		size_hint: 1, 1
+		pos_hint: {'right': 1, 'top': 1}
+
+<HomeScreen>:
+	name: "HomeS"
+	text: "HomeScreen"
+	Button:
+		#text: "Home"
+		pos_hint: {'x': 0, 'bottom': 0}
+		Image:
+			source: 'Button_Image/Home-Button.png'
+			x: 0
+        	y: 0
+        	size: 75,25
+        	allow_stretch: True
+
+	Button:
+		on_release: app.root.current = "HintS"
+		text: "Hint"
+		pos_hint: {'right': 0.5+1/6, 'bottom': 0}
+
+	Button:
+		on_release: app.root.current = "MagicS"
+		text: "Magic"
+		pos_hint: {'right': 1, 'bottom': 0}
+
+<HintScreen>:
+	name: "HintS"
+	text: "HintScreen"
+	Button:
+		on_release: app.root.current = "HomeS"
+		text: "Home"
+		pos_hint: {'x': 0, 'bottom': 0}
+
+	Button:
+		text: "Hint"
+		pos_hint: {'right': 0.5+1/6, 'bottom': 0}
+
+	Button:
+		on_release: app.root.current = "MagicS"
+		text: "Magic"
+		pos_hint: {'right': 1, 'bottom': 0}
+
+<MagicScreen>:
+	name: "MagicS"
+	text: "MagicScreen"
+	Button:
+		on_release: app.root.current = "HomeS"
+		text: "Home"
+		pos_hint: {'x': 0, 'bottom': 0}
+
+	Button:
+		on_release: app.root.current = "HintS"
+		text: "Hint"
+		pos_hint: {'right': 0.5+1/6, 'bottom': 0}
+		
+	Button:
+		text: "Magic"
+		pos_hint: {'right': 1, 'bottom': 0}

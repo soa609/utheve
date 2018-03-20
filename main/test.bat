@@ -1,0 +1,1 @@
+C:\WINDOWS\system32\cmd.exe /K "C:\Users\e_hel\OneDrive\Python Projects\Utheve\main\utheve.py"

@@ -1,0 +1,1 @@
+C:\WINDOWS\system32\cmd.exe /K "C:\Users\espen\OneDrive\Python Projects\Utheve\alg.py"
